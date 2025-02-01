@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3';
+    background-color: #FBFBFB;
+    overflow-x: hidden;
+    height: 100vh;
+    letter-spacing: 1px;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    background-color: #1f8cbb;
+    padding: 10px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav .logo {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: white;
+    white-space: nowrap;
+}
+
+nav .search-bar {
+    display: flex;
+    /* flex-grow: 1; */
+    justify-content: center;
+}
+
+nav .search-bar input {
+    padding: 10px;
+    border-radius: 25px;
+    margin: 0 10px;
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.22);
+}
+
+nav .search-bar input::placeholder {
+    color: white;
+    font-family: 'Source Sans 3';
+    font-size: 1rem;
+}
+
+nav .search-bar button {
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+nav .search-bar button:hover {
+    color: white;
+    background-color: black;
+}
+
+nav .navlinks {
+    padding: 0;
+    justify-content: flex-end;
+}
+
+nav .navlinks ul {
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+nav .navlinks ul li {
+    list-style: none;
+}
+
+nav .navlinks ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+nav .navlinks ul li a:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+nav .light-dark-toggle button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+}
+
+nav .light-dark-toggle button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* Sidebar Container */
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -500px;
+    width: 50%;
+    height: 100%;
+    background-color: #1f8cbb;
+    color: white;
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+/* Sidebar Links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    text-align: center;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #292a2d;
+}
+
+.menu-btn {
+    font-size: 24px;
+    display: none;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.main-container{
+    height: 100vh;
+}
+
+footer {
+    bottom: 0;
+    background-color: #FBFBFB;
+    width: 100%;
+    color: black;
+}
+
+.footer-logo {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-logo h1{
+    font-size: 2.5rem;
+}
+
+.footer-logo p {
+    padding-top: 25px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    text-align: left;
+}
+
+.footer-container h4 {
+    font-size: 1.1rem;
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container ul li {
+    padding: 5px;
+}
+
+.footer-container ul li a {
+    text-decoration: none;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    color: black;
+}
+
+.footer-section ul li a:hover {
+    opacity: 1;
+}
+
+.social-media a {
+    font-size: 23px;
+    padding: 10px;
+    color: black;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    opacity: 0.8;
+}
+
+.footer-bottom :hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .navlinks {
+        display: none;
+    }
+
+    .sidebar {
+        left: -250px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    #search-bar {
+        width: 100px;
+    }
+
+    .light-dark-toggle {
+        display: none;
+    }
+
+    .sidebar {
+        display: block;
+    }
+
+    .footer-logo {
+        padding: 20px;
+        color: white;
+        display: block;
+    }
+
+    .footer-logo p {
+        padding-top: 0px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 90%;
+    }
+}
