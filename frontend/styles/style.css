@@ -3,40 +3,33 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    scroll-margin: 70px;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Source Sans 3';
-    background-color: #FBFBFB;
-    overflow-x: hidden;
-    height: 100vh;
+    background-color: #ffffff;
     letter-spacing: 1px;
-}
-
-header {
-    width: 100%;
+    box-sizing: border-box;
 }
 
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    margin: 10px auto;
+    /* Center it */
+    background-color: #ffffff;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 10px 15px;
     top: 0;
     position: fixed;
-    z-index: 1000;
-    background-color: #1f8cbb;
-    padding: 10px 5%;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-nav .logo {
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: white;
-    white-space: nowrap;
+    left: 15px;
+    right: 15px;
+    border: 0.1px solid black;
+    /* Avoid width overflow */
 }
 
 nav .search-bar {
@@ -75,15 +68,19 @@ nav .search-bar button:hover {
 }
 
 nav .navlinks {
-    padding: 0;
+    display: flex;
+    /* Make it a flex container */
     justify-content: flex-end;
+    /* Push content to the end */
 }
+
 
 nav .navlinks ul {
     display: flex;
     gap: 15px;
     padding: 0;
     margin: 0;
+    color: black;
 }
 
 nav .navlinks ul li {
@@ -99,8 +96,8 @@ nav .navlinks ul li a {
 }
 
 nav .navlinks ul li a:hover {
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 nav .light-dark-toggle button {
@@ -122,13 +119,14 @@ nav .light-dark-toggle button:hover {
     position: fixed;
     top: 0;
     left: -500px;
-    width: 50%;
+    width: 225px;
     height: 100%;
-    background-color: #1f8cbb;
+    background-color: #d4f4ff;
     color: white;
     transition: left 0.3s ease-in-out;
     padding-top: 60px;
     z-index: 1000;
+    border: 0.1px solid black;
 }
 
 /* Sidebar Links */
@@ -144,7 +142,7 @@ nav .light-dark-toggle button:hover {
 
 .sidebar ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     display: block;
     font-size: 1.2rem;
     transition: 0.3s;
@@ -165,14 +163,41 @@ nav .light-dark-toggle button:hover {
 }
 
 .main-container{
+    padding: 20px;
+    height: 600px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #d4f4ff;
+}
+
+.main-container button{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #1f8cbb;
+    border: none;
+    border-radius: 50px;
+}
+
+#about{
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
 }
 
 footer {
     bottom: 0;
-    background-color: #FBFBFB;
+    background-color: #000000;
     width: 100%;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .footer-logo {
@@ -181,7 +206,7 @@ footer {
     justify-content: space-around;
 }
 
-.footer-logo h1{
+.footer-logo h1 {
     font-size: 2.5rem;
 }
 
@@ -213,7 +238,7 @@ footer {
     text-decoration: none;
     opacity: 0.8;
     font-size: 0.9rem;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .footer-section ul li a:hover {
@@ -223,12 +248,13 @@ footer {
 .social-media a {
     font-size: 23px;
     padding: 10px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .footer-bottom {
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
     opacity: 0.8;
 }
 
@@ -246,7 +272,7 @@ footer {
         font-size: 1rem;
     }
 
-    .navlinks {
+    nav .navlinks {
         display: none;
     }
 
@@ -287,5 +313,10 @@ footer {
 
     .footer-section {
         width: 90%;
+    }
+
+    .footer-bottom{
+        display: flex;
+        flex-direction: column;
     }
 }
