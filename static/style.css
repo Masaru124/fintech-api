@@ -18,10 +18,9 @@ body {
 nav {
     display: flex;
     align-items: center;
-    margin: 10px auto;
-    /* Center it */
-    background-color: #ffffff4f;
-    justify-content: center;
+    margin: 20px auto;
+    background-color: #ffffffb4;
+    justify-content: space-evenly;
     border-radius: 50px;
     padding: 10px 15px;
     top: 0;
@@ -32,9 +31,7 @@ nav {
     /* Avoid width overflow */
 }
 
-img {
-    width: 100%;
-}
+
 
 nav .navlinks {
     display: flex;
