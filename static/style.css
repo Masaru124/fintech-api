@@ -133,8 +133,7 @@ nav .light-dark-toggle button:hover {
 }
 
 #home {
-    background-image: url("{ % static 'images/Designer.jpg' % }");
-}
+    background-image: url('/static/images/Designer.jpg');}
 
 .main-container {
     padding: 20px;
