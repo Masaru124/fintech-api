@@ -20,7 +20,7 @@ nav {
     align-items: center;
     margin: 10px auto;
     /* Center it */
-    background-color: #ffffff;
+    background-color: #ffffff4f;
     justify-content: center;
     border-radius: 50px;
     padding: 10px 15px;
@@ -89,7 +89,7 @@ nav .light-dark-toggle button:hover {
     left: -500px;
     width: 225px;
     height: 100%;
-    background-color: #d4f4ff;
+    background-color: #ffffffea;
     color: white;
     transition: left 0.3s ease-in-out;
     padding-top: 60px;
@@ -135,23 +135,37 @@ nav .light-dark-toggle button:hover {
 
 
 .main-container {
-    padding: 20px;
-    height: 600px;
+    background: url('/static/images/Designer.jpg') no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: auto;
+    height: 100vh;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #dbf4fc;
+    background-color: #000000;
 }
 
 .main-container h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    color: white;
+    background-color: #00000081;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 20px;
 }
 
 .main-container p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #00000081;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 20px;
 }
 
 .main-container button {
@@ -176,7 +190,7 @@ nav .light-dark-toggle button:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 footer {
@@ -280,6 +294,15 @@ footer {
 
     .sidebar {
         display: block;
+    }
+
+    .main-container h1 {
+        font-size: 2rem;
+    }
+    
+    .main-container p {
+        font-size: 1.2rem;
+        color: white;
     }
 
     .footer-logo {
