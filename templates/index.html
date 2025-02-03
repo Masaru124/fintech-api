@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,14 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="../static/images/xleven-logo.png" alt="logo">
+                <img src="{% static 'images/xleven-logo.png' %}" alt="logo">
             </div>
 
             <div class="navlinks">
@@ -99,13 +100,10 @@
                     <li><a href="#">Transaction Limits & Fees</a></li>
                 </ul>
             </div>
-
-
         </div>
         <div class="footer-bottom">
             <div class="footer-section copyright">
                 <p>&copy; 2025 Xleven. All Rights Reserved.</p>
-
             </div>
             <div class="footer-section social-media">
                 <h4>Find Us On</h4>
@@ -114,11 +112,9 @@
                 <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
-
     </footer>
 
-
-    <script src="../js/index.js"></script>
+    <script src="{% static 'js/index.js' %}"></script>
 </body>
 
 </html>

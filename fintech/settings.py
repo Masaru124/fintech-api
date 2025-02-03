@@ -20,6 +20,7 @@ DATABASES = {
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Added to include the static directory
 
 # URL configuration
 ROOT_URLCONF = 'fintech.urls'
@@ -54,7 +55,7 @@ MIDDLEWARE = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],  # You can specify template directories if needed
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Updated to include the templates directory
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -66,7 +67,6 @@ TEMPLATES = [
         },
     },
 ]
-
 
 # JWT Authentication (for Phase 2)
 REST_FRAMEWORK = {
